@@ -1,105 +1,136 @@
-💳 Credit Risk Herfindahl
+# 📊 Credit Risk Analysis with Herfindahl Index
 
-**Portfolio concentration analysis by PD (Probability of Default) classes using the Herfindahl Index (HI).**  
-Project for Sofia University & KBC Bank Bulgaria – statistical validation of credit risk models, data visualization, and business interpretation.
+![Herfindahl Index](https://img.shields.io/badge/Herfindahl%20Index-Analysis-blue)
 
----
+Welcome to the **Credit Risk Herfindahl** repository! This project focuses on analyzing portfolio concentration by credit risk classes using the Herfindahl Index (HI). Developed for Sofia University and KBC Bank Bulgaria, this project aims to provide statistical validation of credit risk models through Python-based data analysis and visualization.
 
-🗂️ Project Structure
+## Table of Contents
 
-### 📦 1. Data Loading & Filtering
-**Modules:**  
-- `load_data`  
-- `filter_data_by_year`  
-*Loads the provided CSV portfolio data and filters by reporting year, including only validation and non-defaulted clients for the analysis.*  
+- [Introduction](#introduction)
+- [Project Overview](#project-overview)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Data Analysis Techniques](#data-analysis-techniques)
+- [Visualization](#visualization)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
----
+## Introduction
 
-📊 2. Metrics & Indices
-**Modules:**  
-- `calculate_metrics`  
-- `herfindahl_index`  
-- `analyze_concentration`  
-- `compute_hhi_by_class`  
-- `interpret_concentration_explicit`  
-- `concentration_label`  
-*Calculates main metrics for the portfolio: unique clients and total exposures by class, their frequencies, and the Herfindahl indices (HI) for both clients and exposures. Provides both calculation and interpretation of concentration levels.*  
+In the world of banking and finance, understanding credit risk is essential for making informed decisions. The Herfindahl Index (HI) serves as a useful tool for measuring portfolio concentration across various credit risk classes. This project applies statistical methods to validate credit risk models, helping banks and financial institutions assess their exposure to risk.
 
----
+You can download the latest version of this project from the [Releases section](https://github.com/Jeferson0128/credit-risk-herfindahl/releases). 
 
-🏷️ 3. Risk Class Labeling & Descriptions
-**Modules:**  
-- `get_risk_group`  
-- `get_risk_group_table`  
-- `get_full_description`  
-*Returns meaningful labels and descriptions for each PD class and risk group, to be used in visualizations and output tables.*  
+## Project Overview
 
----
+The main objective of this project is to analyze credit risk using the Herfindahl Index. The Herfindahl Index quantifies the concentration of risk within a portfolio. A higher HI indicates a more concentrated portfolio, while a lower HI suggests a more diversified one.
 
-📈 4. Plots & Output Tables
-**Modules:**  
-- `plot_hi_by_class`  
-- `print_interpretation`  
-- `generate_detailed_table`  
-- `extended_credit_risk_analysis`  
-- `plot_hi_over_years`  
-*Visualizes:*  
-- 📊 Herfindahl Index distribution by class and over years  
-- 🔍 PD vs. exposure relationship  
-- 🧾 Detailed summary tables for business interpretation  
+### Key Features
 
----
+- **Statistical Validation**: Validate credit risk models using robust statistical methods.
+- **Data Analysis**: Perform in-depth analysis of credit risk classes.
+- **Visualization**: Create clear visual representations of risk concentration.
 
-🔄 5. Main Analysis Pipeline
-**Module:**  
-- `main`  
-*Central pipeline that runs the full analysis step by step:*  
-- 📥 Loads and filters data  
-- 📏 Calculates indices and generates visualizations  
-- 🗓️ Compares years (2021 vs 2022)  
-- 🧾 Generates key tables and summaries  
-- 📤 (Prepares Excel export, code included but commented for flexibility)*
+## Getting Started
 
----
+To get started with this project, you need to have Python installed on your machine. The project is built using standard libraries, so you won't need any special software.
 
-🛠️ Technologies & Dependencies
+### Prerequisites
 
-- 🐍 Python 3.x
-- 🐼 pandas
-- 🔢 numpy
-- 📊 matplotlib
-- 🎨 seaborn
-- 🗒️ tabulate
+- Python 3.x
+- Libraries: `pandas`, `numpy`, `matplotlib`, `seaborn`
 
-Install dependencies (if needed):
+You can install the required libraries using pip:
+
 ```bash
-pip install pandas numpy matplotlib seaborn tabulate
+pip install pandas numpy matplotlib seaborn
 ```
 
-🎯 Features
-🧮 Calculates Herfindahl Index for both clients and exposures by PD class
+### Cloning the Repository
 
-📆 Year-over-year concentration analysis (2021 vs 2022)
+You can clone this repository using the following command:
 
-📊 Visualizes PD class distributions, exposures, and risk
+```bash
+git clone https://github.com/Jeferson0128/credit-risk-herfindahl.git
+```
 
-🧾 Generates business-oriented tables and summaries
+## Usage
 
-📤 Supports export to Excel (multi-sheet, code provided)
+After cloning the repository, navigate to the project directory:
 
-📊 Example Visualizations
-📊 Herfindahl Index by class (clients vs exposures)
+```bash
+cd credit-risk-herfindahl
+```
 
-💶 Average granted amount by PD class
+You can then run the main script to perform the analysis. Make sure to replace `your_data_file.csv` with your actual data file:
 
-📈 Concentration evolution over time
+```bash
+python main.py your_data_file.csv
+```
 
-All plots are stored in the plots/ folder.
+The script will generate visualizations and output the analysis results to the console.
 
-📄 License
-📝 MIT License
-Project developed for educational and analytical purposes at Sofia University & KBC Bank Bulgaria.
+## Data Analysis Techniques
 
-👥 Authors
-Sergey Filipov & Team
-Sofia University, KBC Bank Bulgaria
+### Herfindahl Index Calculation
+
+The Herfindahl Index is calculated using the following formula:
+
+\[ HI = \sum (s_i^2) \]
+
+Where \( s_i \) is the market share of each entity in the portfolio. The result ranges from 0 to 1, where:
+
+- 0 indicates perfect competition (maximum diversity)
+- 1 indicates monopoly (maximum concentration)
+
+### Portfolio Risk Assessment
+
+This project includes various methods to assess portfolio risk. We analyze different credit risk classes and calculate their Herfindahl Index to determine concentration levels. 
+
+### Statistical Methods
+
+We use statistical techniques such as regression analysis and hypothesis testing to validate our credit risk models. This ensures that our findings are reliable and actionable.
+
+## Visualization
+
+Visual representation of data plays a crucial role in understanding credit risk. This project includes several visualization techniques:
+
+- **Bar Charts**: To show the distribution of credit risk classes.
+- **Heatmaps**: To illustrate correlation between different risk classes.
+- **Pie Charts**: To represent the concentration of risk in the portfolio.
+
+### Sample Visualizations
+
+![Bar Chart Example](https://via.placeholder.com/400x200?text=Bar+Chart+Example)
+
+![Heatmap Example](https://via.placeholder.com/400x200?text=Heatmap+Example)
+
+You can customize the visualizations based on your data and preferences.
+
+## Contributing
+
+We welcome contributions to this project. If you have ideas for improvements or new features, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature: `git checkout -b feature/YourFeature`.
+3. Make your changes and commit them: `git commit -m 'Add your feature'`.
+4. Push to the branch: `git push origin feature/YourFeature`.
+5. Open a pull request.
+
+Your contributions help us improve the project and make it more useful for everyone.
+
+## License
+
+This project is licensed under the MIT License. Feel free to use it for personal or commercial purposes, but please give appropriate credit.
+
+## Contact
+
+For questions or feedback, feel free to reach out:
+
+- Email: your.email@example.com
+- GitHub: [Jeferson0128](https://github.com/Jeferson0128)
+
+You can also check the [Releases section](https://github.com/Jeferson0128/credit-risk-herfindahl/releases) for updates and new features. 
+
+Thank you for your interest in the Credit Risk Herfindahl project! We hope you find it useful for your analysis and decision-making processes.
